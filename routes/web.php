@@ -5,11 +5,14 @@ use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\FeedbackController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
 |--------------------------------------------------------------------------
 */
+// Route::post('/feedback', [FeedbackController::class, 'store']);
+// Route::get('/feedback', [FeedbackController::class, 'index']);
 Route::get('/', function () {
     return redirect()->route('login');
 });

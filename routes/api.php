@@ -1,7 +1,8 @@
 <?php
-use App\Http\Controllers\Api\PostController;
-use Illuminate\Support\Facades\Route;
 
-Route::middleware('auth:sanctum')->group(function() {
-    Route::apiResource('posts', PostController::class);
-});
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\FeedbackController;
+
+Route::post('/feedback', [FeedbackController::class, 'store']);
+Route::get('/feedback', [FeedbackController::class, 'index']);
